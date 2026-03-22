@@ -6,11 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VoiceFlow Privacy Policy</title>
     <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
@@ -22,34 +18,15 @@
             background: #fafafa;
         }
 
-        h1 {
-            color: #6750A4;
-            margin-bottom: 8px;
-        }
+        h1 { color: #6750A4; margin-bottom: 8px; }
 
-        .last-updated {
-            color: #666;
-            font-size: 14px;
-            margin-bottom: 32px;
-        }
+        .last-updated { color: #666; font-size: 14px; margin-bottom: 32px; }
 
-        h2 {
-            color: #1C1B1F;
-            margin-top: 32px;
-            margin-bottom: 12px;
-            font-size: 20px;
-        }
+        h2 { color: #1C1B1F; margin-top: 32px; margin-bottom: 12px; font-size: 20px; }
 
-        p,
-        li {
-            margin-bottom: 12px;
-            color: #444;
-        }
+        p, li { margin-bottom: 12px; color: #444; }
 
-        ul {
-            margin-left: 24px;
-            margin-bottom: 16px;
-        }
+        ul { margin-left: 24px; margin-bottom: 16px; }
 
         .highlight {
             background: #E7E0EC;
@@ -58,105 +35,112 @@
             margin: 16px 0;
         }
 
-        a {
-            color: #6750A4;
-        }
+        a { color: #6750A4; }
 
         @media (prefers-color-scheme: dark) {
-            body {
-                background: #1C1B1F;
-                color: #E6E1E5;
-            }
-
-            h1 {
-                color: #D0BCFF;
-            }
-
-            h2 {
-                color: #E6E1E5;
-            }
-
-            p,
-            li {
-                color: #CAC4D0;
-            }
-
-            .highlight {
-                background: #2B2930;
-            }
-
-            a {
-                color: #D0BCFF;
-            }
-
-            .last-updated {
-                color: #938F99;
-            }
+            body { background: #1C1B1F; color: #E6E1E5; }
+            h1 { color: #D0BCFF; }
+            h2 { color: #E6E1E5; }
+            p, li { color: #CAC4D0; }
+            .highlight { background: #2B2930; }
+            a { color: #D0BCFF; }
+            .last-updated { color: #938F99; }
         }
     </style>
 </head>
 
 <body>
     <h1>VoiceFlow Privacy Policy</h1>
-    <p class="last-updated">Last updated: December 9, 2025</p>
+    <p class="last-updated">Last updated: March 22, 2026</p>
 
     <div class="highlight">
-        <strong>Summary:</strong> VoiceFlow processes your voice locally and through secure AI services. We don't store
-        your voice recordings or transcriptions. Your API keys are encrypted on your device.
+        <strong>Summary:</strong> VoiceFlow keeps a history of your transcribed texts on your device so you
+        can re-use them later. Your voice recordings are never saved — only the resulting text is stored.
+        All API keys are encrypted. No data is sent to our servers.
     </div>
 
     <h2>Information We Collect</h2>
-    <p>VoiceFlow collects minimal information necessary for the app to function:</p>
+    <p>VoiceFlow stores the following data locally on your device:</p>
     <ul>
-        <li><strong>Voice recordings:</strong> Temporarily captured when you tap the microphone button, processed
-            immediately, then deleted.</li>
-        <li><strong>API keys:</strong> Your Groq and Gemini API keys are stored encrypted on your device only.</li>
+        <li><strong>Transcription history:</strong> The last 20 transcribed texts are saved on your device
+            so you can view and re-use them from the History screen. This text is stored only in your
+            device's app storage and never sent to us or any third party. History is <em>never</em> recorded
+            when you dictate into a password field.</li>
+        <li><strong>API keys:</strong> Your Groq, Gemini, and Sarvam API keys (whichever you configure) are
+            stored on your device using Android's encrypted storage (AES-256). They are never transmitted
+            to us.</li>
+        <li><strong>App settings:</strong> Your language preferences, customization settings, and other
+            in-app choices are saved locally on your device.</li>
     </ul>
+    <p><strong>Voice recordings are never saved to storage.</strong> Audio is captured in memory, processed,
+        and immediately discarded.</p>
 
     <h2>How We Use Your Information</h2>
+    <p>Your voice recording is sent to one of the following services depending on which engine you have
+        selected in Settings:</p>
     <ul>
-        <li><strong>Voice-to-text conversion:</strong> Your voice is sent to Groq's Whisper API for transcription.</li>
-        <li><strong>Text formatting (optional):</strong> Transcribed text may be sent to Google Gemini for formatting.
-        </li>
+        <li><strong>Groq Whisper (Cloud):</strong> Voice is sent to
+            <a href="https://groq.com" target="_blank">Groq's</a> Whisper API for transcription.</li>
+        <li><strong>Google Gemini (Cloud):</strong> Voice is sent to
+            <a href="https://deepmind.google/technologies/gemini/" target="_blank">Google's</a> Gemini API
+            for transcription and optional formatting in a single call.</li>
+        <li><strong>Sarvam AI (Cloud):</strong> Voice is sent to
+            <a href="https://www.sarvam.ai" target="_blank">Sarvam AI's</a> API for transcription,
+            optimised for Indian languages.</li>
+        <li><strong>Offline Mode:</strong> Voice is processed entirely on your device using a local AI model
+            (IndicConformer or Whisper Local). <strong>No audio or text leaves your phone.</strong></li>
     </ul>
-    <p>We do not use your data for any other purpose.</p>
+    <p>The resulting text is inserted into the active app and saved to your on-device History (unless you
+        were typing into a password field). We do not use your data for any other purpose.</p>
 
     <h2>Third-Party Services</h2>
-    <p>VoiceFlow uses these third-party services:</p>
+    <p>Depending on your chosen engine, your voice recording may be sent to one of these services:</p>
     <ul>
-        <li><strong>Groq API:</strong> For speech-to-text conversion. See <a href="https://groq.com/privacy-policy/"
-                target="_blank">Groq's Privacy Policy</a>.</li>
-        <li><strong>Google Gemini API:</strong> For optional text formatting. See <a
-                href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a>.</li>
+        <li><strong>Groq API:</strong> Speech-to-text transcription. See
+            <a href="https://groq.com/privacy-policy/" target="_blank">Groq's Privacy Policy</a>.</li>
+        <li><strong>Google Gemini API:</strong> Speech-to-text and text formatting. See
+            <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a>.</li>
+        <li><strong>Sarvam AI API:</strong> Speech-to-text for Indian languages. See
+            <a href="https://www.sarvam.ai/privacy-policy" target="_blank">Sarvam's Privacy Policy</a>.</li>
     </ul>
+    <p>If you use Offline Mode, no audio or text is sent to any external service.</p>
 
     <h2>Data Security</h2>
     <ul>
-        <li>API keys are stored using Android's EncryptedSharedPreferences</li>
-        <li>All network communication uses HTTPS encryption</li>
-        <li>Voice recordings are never saved to storage</li>
-        <li>No data is sent to our servers — we don't have any</li>
+        <li>API keys are stored using Android's EncryptedSharedPreferences (AES-256-GCM).</li>
+        <li>All network communication uses HTTPS encryption.</li>
+        <li>Voice recordings are never saved to disk — processed in memory only.</li>
+        <li>Transcription history is stored only in your device's private app storage.</li>
+        <li>No data is sent to our servers — we don't have any.</li>
+        <li>When using Offline Mode, nothing leaves your device at all.</li>
     </ul>
 
     <h2>Data Retention</h2>
-    <p>VoiceFlow does not retain any of your data. Voice recordings are processed in memory and immediately discarded.
-        Transcribed text is inserted into your app and not stored by VoiceFlow.</p>
+    <p>VoiceFlow retains the last 20 transcribed texts on your device in the History feature. You can clear
+        this at any time using the <strong>Clear History</strong> button. Voice recordings are never
+        retained — they are processed in memory and immediately discarded after transcription.</p>
+
+    <h2>Your Rights & Control</h2>
+    <ul>
+        <li><strong>Clear history:</strong> Open the History screen and tap "Clear All" to delete all saved
+            transcriptions immediately.</li>
+        <li><strong>Delete API keys:</strong> Go to Settings → API Configuration and clear any key at any
+            time.</li>
+        <li><strong>Full deletion:</strong> Uninstalling the app removes all locally stored data, including
+            history, API keys, and settings.</li>
+    </ul>
 
     <h2>Children's Privacy</h2>
-    <p>Since we do not collect any personal data from any users, we naturally do not collect data from children. If you
-        are a parent or guardian and believe that your child has provided us with personal information, please contact
-        us.</p>
-
-    <h2>Your Rights</h2>
-    <p>Since we don't collect or store personal data, there is no data to access, correct, or delete. You can uninstall
-        the app at any time to remove all locally stored preferences.</p>
+    <p>VoiceFlow does not knowingly collect personal information from children under 13. Since we do not
+        operate any servers, no data from any user (including children) is transmitted to us.</p>
 
     <h2>Changes to This Policy</h2>
-    <p>We may update this policy occasionally. Significant changes will be communicated through app updates.</p>
+    <p>We may update this policy occasionally. Significant changes will be communicated through app
+        updates.</p>
 
     <h2>Contact</h2>
     <p>Questions about this privacy policy? Contact us at:</p>
-    <p><a href="mailto:omkarvahile@gmail.com">omkarvahile@gmail.com</a></p>
+    <p><a href="mailto:voiceflow.help@gmail.com">voiceflow.help@gmail.com</a></p>
 
 </body>
 
